@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-11T19:00:07Z",
+ "updated": "2026-11-11T19:01:46Z",
  "repo": "andy-duback/ladder",
  "tickers": {
   "COPX": {
    "last": {
     "date": "2026-11-11",
-    "close": 73.51,
-    "adj": 73.51
+    "close": 73.48,
+    "adj": 73.48
    },
    "from": {},
    "name": "Global X Copper Miners ETF",
@@ -15,8 +15,8 @@
   "CRDO": {
    "last": {
     "date": "2026-11-11",
-    "close": 144.91,
-    "adj": 144.91
+    "close": 144.555,
+    "adj": 144.555
    },
    "from": {},
    "name": "Credo Technology Group Holding Ltd",
@@ -25,8 +25,8 @@
   "CRWD": {
    "last": {
     "date": "2026-11-11",
-    "close": 234.81,
-    "adj": 234.81
+    "close": 234.57,
+    "adj": 234.57
    },
    "from": {},
    "name": "CrowdStrike Holdings, Inc.",
@@ -35,8 +35,8 @@
   "ETN": {
    "last": {
     "date": "2026-11-11",
-    "close": 365.9,
-    "adj": 365.9
+    "close": 365.64,
+    "adj": 365.64
    },
    "from": {},
    "name": "Eaton Corporation plc",
@@ -45,8 +45,8 @@
   "GLD": {
    "last": {
     "date": "2026-11-11",
-    "close": 365.34,
-    "adj": 365.34
+    "close": 365.2401,
+    "adj": 365.2401
    },
    "from": {},
    "name": "SPDR Gold Shares",
@@ -55,8 +55,8 @@
   "GOOGL": {
    "last": {
     "date": "2026-11-11",
-    "close": 294.97,
-    "adj": 294.97
+    "close": 295.025,
+    "adj": 295.025
    },
    "from": {},
    "name": "Alphabet Inc.",
@@ -65,8 +65,8 @@
   "IAG": {
    "last": {
     "date": "2026-11-11",
-    "close": 18.345,
-    "adj": 18.345
+    "close": 18.34,
+    "adj": 18.34
    },
    "from": {},
    "name": "IAMGOLD Corporation",
@@ -75,8 +75,8 @@
   "IONQ": {
    "last": {
     "date": "2026-11-11",
-    "close": 34.57,
-    "adj": 34.57
+    "close": 34.58,
+    "adj": 34.58
    },
    "from": {},
    "name": "IonQ, Inc.",
@@ -85,8 +85,8 @@
   "IOVA": {
    "last": {
     "date": "2026-11-11",
-    "close": 8.085,
-    "adj": 8.085
+    "close": 8.075,
+    "adj": 8.075
    },
    "from": {},
    "name": "Iovance Biotherapeutics, Inc.",
@@ -95,8 +95,8 @@
   "MP": {
    "last": {
     "date": "2026-11-11",
-    "close": 37.805,
-    "adj": 37.805
+    "close": 37.76,
+    "adj": 37.76
    },
    "from": {},
    "name": "MP Materials Corp.",
@@ -105,8 +105,8 @@
   "NVDA": {
    "last": {
     "date": "2026-11-11",
-    "close": 176.885,
-    "adj": 176.885
+    "close": 176.835,
+    "adj": 176.835
    },
    "from": {},
    "name": "NVIDIA Corporation",
@@ -115,8 +115,8 @@
   "SLV": {
    "last": {
     "date": "2026-11-11",
-    "close": 46.825,
-    "adj": 46.825
+    "close": 46.8099,
+    "adj": 46.8099
    },
    "from": {},
    "name": "iShares Silver Trust",
@@ -125,8 +125,8 @@
   "SPCX": {
    "last": {
     "date": "2026-11-11",
-    "close": 142.2997,
-    "adj": 142.2997
+    "close": 142.155,
+    "adj": 142.155
    },
    "from": {},
    "name": "Space Exploration Technologies Corp.",
@@ -135,8 +135,8 @@
   "SPY": {
    "last": {
     "date": "2026-11-11",
-    "close": 762.04,
-    "adj": 762.04
+    "close": 761.91,
+    "adj": 761.91
    },
    "from": {},
    "name": "State Street SPDR S&P 500 ETF Trust",
@@ -145,8 +145,8 @@
   "TSLA": {
    "last": {
     "date": "2026-11-11",
-    "close": 394.29,
-    "adj": 394.29
+    "close": 394.02,
+    "adj": 394.02
    },
    "from": {},
    "name": "Tesla, Inc.",
@@ -155,8 +155,8 @@
   "TSM": {
    "last": {
     "date": "2026-11-11",
-    "close": 415.815,
-    "adj": 415.815
+    "close": 415.76,
+    "adj": 415.76
    },
    "from": {},
    "name": "Taiwan Semiconductor Manufacturing Company Limited",
@@ -165,8 +165,8 @@
   "UNG": {
    "last": {
     "date": "2026-11-11",
-    "close": 10.2,
-    "adj": 10.2
+    "close": 10.19,
+    "adj": 10.19
    },
    "from": {},
    "name": "United States Natural Gas Fund, LP",
@@ -185,8 +185,8 @@
   "VKTX": {
    "last": {
     "date": "2026-11-11",
-    "close": 28.89,
-    "adj": 28.89
+    "close": 28.85,
+    "adj": 28.85
    },
    "from": {},
    "name": "Viking Therapeutics, Inc.",
@@ -195,8 +195,8 @@
   "VOO": {
    "last": {
     "date": "2026-11-11",
-    "close": 700.39,
-    "adj": 700.39
+    "close": 700.36,
+    "adj": 700.36
    },
    "from": {},
    "name": "Vanguard S&P 500 ETF",
@@ -205,8 +205,8 @@
   "VST": {
    "last": {
     "date": "2026-11-11",
-    "close": 135.555,
-    "adj": 135.555
+    "close": 135.375,
+    "adj": 135.375
    },
    "from": {},
    "name": "Vistra Corp.",
