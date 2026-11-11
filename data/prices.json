@@ -1,42 +1,62 @@
 {
- "updated": "2026-11-11T19:16:10Z",
+ "updated": "2026-11-11T19:18:18Z",
  "repo": "andy-duback/ladder",
  "tickers": {
   "COPX": {
    "last": {
     "date": "2026-11-11",
-    "close": 73.3,
-    "adj": 73.3
+    "close": 73.25,
+    "adj": 73.25
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
-     "close": 73.3,
-     "adj": 73.3,
-     "lowClose": 73.3,
-     "highClose": 73.3,
-     "lowAdj": 73.3,
-     "highAdj": 73.3
+     "close": 73.25,
+     "adj": 73.25,
+     "lowClose": 73.25,
+     "highClose": 73.25,
+     "lowAdj": 73.25,
+     "highAdj": 73.25
     }
    },
    "name": "Global X Copper Miners ETF",
    "currency": "USD"
   },
-  "NVDA": {
+  "GOOGL": {
    "last": {
     "date": "2026-11-11",
-    "close": 175.82,
-    "adj": 175.82
+    "close": 293.875,
+    "adj": 293.875
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
-     "close": 175.82,
-     "adj": 175.82,
-     "lowClose": 175.82,
-     "highClose": 175.82,
-     "lowAdj": 175.82,
-     "highAdj": 175.82
+     "close": 293.875,
+     "adj": 293.875,
+     "lowClose": 293.875,
+     "highClose": 293.875,
+     "lowAdj": 293.875,
+     "highAdj": 293.875
+    }
+   },
+   "name": "Alphabet Inc.",
+   "currency": "USD"
+  },
+  "NVDA": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 175.66,
+    "adj": 175.66
+   },
+   "from": {
+    "2026-11-11": {
+     "date": "2026-11-11",
+     "close": 175.66,
+     "adj": 175.66,
+     "lowClose": 175.66,
+     "highClose": 175.66,
+     "lowAdj": 175.66,
+     "highAdj": 175.66
     }
    },
    "name": "NVIDIA Corporation",
@@ -45,18 +65,18 @@
   "SLV": {
    "last": {
     "date": "2026-11-11",
-    "close": 46.745,
-    "adj": 46.745
+    "close": 46.705,
+    "adj": 46.705
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
-     "close": 46.745,
-     "adj": 46.745,
-     "lowClose": 46.745,
-     "highClose": 46.745,
-     "lowAdj": 46.745,
-     "highAdj": 46.745
+     "close": 46.705,
+     "adj": 46.705,
+     "lowClose": 46.705,
+     "highClose": 46.705,
+     "lowAdj": 46.705,
+     "highAdj": 46.705
     }
    },
    "name": "iShares Silver Trust",
@@ -65,18 +85,18 @@
   "TSM": {
    "last": {
     "date": "2026-11-11",
-    "close": 414.055,
-    "adj": 414.055
+    "close": 413.955,
+    "adj": 413.955
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
-     "close": 414.055,
-     "adj": 414.055,
-     "lowClose": 414.055,
-     "highClose": 414.055,
-     "lowAdj": 414.055,
-     "highAdj": 414.055
+     "close": 413.955,
+     "adj": 413.955,
+     "lowClose": 413.955,
+     "highClose": 413.955,
+     "lowAdj": 413.955,
+     "highAdj": 413.955
     }
    },
    "name": "Taiwan Semiconductor Manufacturing Company Limited",
