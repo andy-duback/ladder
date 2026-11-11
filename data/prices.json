@@ -1,0 +1,216 @@
+{
+ "updated": "2026-11-11T17:55:00Z",
+ "repo": null,
+ "tickers": {
+  "CRDO": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 147.18,
+    "adj": 147.18
+   },
+   "from": {},
+   "name": "Credo Technology Group Holding Ltd Com",
+   "currency": "USD"
+  },
+  "TSM": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 416.25,
+    "adj": 416.25
+   },
+   "from": {},
+   "name": "Taiwan Semiconductor Manufacturing Spo",
+   "currency": "USD"
+  },
+  "NVDA": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 176.91,
+    "adj": 176.91
+   },
+   "from": {},
+   "name": "Nvidia Corporation Com",
+   "currency": "USD"
+  },
+  "MP": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 38.15,
+    "adj": 38.15
+   },
+   "from": {},
+   "name": "Mp Materials Corp Com Cl A",
+   "currency": "USD"
+  },
+  "CRWD": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 235.46,
+    "adj": 235.46
+   },
+   "from": {},
+   "name": "Crowdstrike Hldgs Inc Cl A",
+   "currency": "USD"
+  },
+  "VST": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 136.53,
+    "adj": 136.53
+   },
+   "from": {},
+   "name": "Vistra Corp Com",
+   "currency": "USD"
+  },
+  "ETN": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 367.99,
+    "adj": 367.99
+   },
+   "from": {},
+   "name": "Eaton Corporation Plc",
+   "currency": "USD"
+  },
+  "VOO": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 699.66,
+    "adj": 699.66
+   },
+   "from": {},
+   "name": "Vanguard Index Funds S&P 500 Etf Usd",
+   "currency": "USD"
+  },
+  "SLV": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 47.07,
+    "adj": 47.07
+   },
+   "from": {},
+   "name": "Ishares Silver Tr Ishares",
+   "currency": "USD"
+  },
+  "IOVA": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 8.13,
+    "adj": 8.13
+   },
+   "from": {},
+   "name": "Iovance Biotherapeutics Inc Com",
+   "currency": "USD"
+  },
+  "IONQ": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 34.93,
+    "adj": 34.93
+   },
+   "from": {},
+   "name": "Ionq Inc Com",
+   "currency": "USD"
+  },
+  "UNG": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 10.35,
+    "adj": 10.35
+   },
+   "from": {},
+   "name": "United Sts Nat Gas Fd Lp Unit Par",
+   "currency": "USD"
+  },
+  "GLD": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 366.72,
+    "adj": 366.72
+   },
+   "from": {},
+   "name": "Spdr Gold Tr Gold Shs",
+   "currency": "USD"
+  },
+  "TSLA": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 393.53,
+    "adj": 393.53
+   },
+   "from": {},
+   "name": "Tesla Inc Com",
+   "currency": "USD"
+  },
+  "URNM": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 42.86,
+    "adj": 42.86
+   },
+   "from": {},
+   "name": "Sprott Fds Tr Uranium Miners E",
+   "currency": "USD"
+  },
+  "GOOGL": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 294.0,
+    "adj": 294.0
+   },
+   "from": {},
+   "name": "Alphabet Inc Cap Stk Cl A",
+   "currency": "USD"
+  },
+  "COPX": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 73.76,
+    "adj": 73.76
+   },
+   "from": {},
+   "name": "Global X Fds Global X Copper",
+   "currency": "USD"
+  },
+  "IAG": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 18.42,
+    "adj": 18.42
+   },
+   "from": {},
+   "name": "Iamgold Corp Com Isin #Ca4509131088 Se",
+   "currency": "USD"
+  },
+  "VKTX": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 28.88,
+    "adj": 28.88
+   },
+   "from": {},
+   "name": "Viking Therapeutics Inc Com Usd0.00001",
+   "currency": "USD"
+  },
+  "SPCX": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 143.23,
+    "adj": 143.23
+   },
+   "from": {},
+   "name": "Space Expl Technologies Corp Cl A",
+   "currency": "USD"
+  },
+  "SPY": {
+   "last": {
+    "date": "2026-11-11",
+    "close": 761.11,
+    "adj": 761.11
+   },
+   "from": {},
+   "name": "State Street Spdr S&P 500 Etf Units",
+   "currency": "USD"
+  }
+ }
+}

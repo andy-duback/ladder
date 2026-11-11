@@ -1,0 +1,16 @@
+{
+  "rungs": [
+    { "change": -50, "action": "add",  "percent": 50 },
+    { "change": -40, "action": "add",  "percent": 30 },
+    { "change": -30, "action": "add",  "percent": 20 },
+    { "change": -20, "action": "add",  "percent": 10 },
+    { "change": -10, "action": "hold" },
+    { "change": 10,  "action": "hold" },
+    { "change": 20,  "action": "hold" },
+    { "change": 30,  "action": "sell", "percent": 10 },
+    { "change": 40,  "action": "sell", "percent": 20 },
+    { "change": 50,  "action": "sell", "percent": 30 },
+    { "change": 60,  "action": "sell", "percent": 40 },
+    { "change": 100, "action": "sell", "percent": 100 }
+  ]
+}

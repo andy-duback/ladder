@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ladder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ground: #ECEFF3;
+  --surface: #FFFFFF;
+  --ink: #14213D;
+  --muted: #5D6B82;
+  --line: #D3D9E3;
+  --add: #0A7B6C;
+  --add-tint: #D5EDE8;
+  --sell: #B5500C;
+  --sell-tint: #F8E2CF;
+  --hold-tint: #E3E7EE;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #0E1522; --surface: #172032; --ink: #E9EEF6; --muted: #97A4BA; --line: #2B364E;
+    --add: #45CDB0; --add-tint: #123D3A; --sell: #F2974F; --sell-tint: #4A2C17; --hold-tint: #242E44;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font: 400 16px/1.5 var(--body); font-variant-numeric: tabular-nums;
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 3px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px 72px; }
+
+.top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 22px 0 0; }
+.brand { font: 700 20px/1 var(--display); letter-spacing: -0.01em; }
+.asof { color: var(--muted); font-size: 14px; text-align: right; }
+
+.today { padding: 44px 0 30px; }
+.today h1 { font: 700 clamp(38px, 6.4vw, 68px)/1.02 var(--display); letter-spacing: -0.03em; margin: 0 0 14px; }
+.today p { margin: 0; font-size: 19px; line-height: 1.45; max-width: 62ch; }
+.today .sell { color: var(--sell); font-weight: 600; }
+.today .add { color: var(--add); font-weight: 600; }
+
+.notice { border-left: 4px solid var(--sell); background: var(--surface); padding: 12px 16px; margin: 0 0 10px; font-size: 15px; }
+
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px 24px; flex-wrap: wrap; margin: 6px 0 12px; }
+.seg { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); border: 0; padding: 0; margin: 0; }
+.seg legend { float: left; padding: 0; margin-right: 10px; }
+.seg label { position: relative; cursor: pointer; }
+.seg input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.seg span { display: block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: transparent; }
+.seg input:checked + span { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+.seg input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
+.jump { font-size: 14px; }
+
+.lots { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.lot {
+  display: grid; grid-template-columns: minmax(170px, 1.15fr) minmax(300px, 2.3fr) 104px minmax(180px, 1.05fr);
+  gap: 6px 28px; align-items: center; padding: 20px 24px 16px 20px;
+  border-top: 1px solid var(--line); border-left: 4px solid transparent;
+}
+.lot:first-child { border-top: 0; }
+.lot.is-add { border-left-color: var(--add); }
+.lot.is-sell { border-left-color: var(--sell); }
+.lot.is-sold, .lot.is-wait { color: var(--muted); }
+.who h2 { font: 700 26px/1.1 var(--display); letter-spacing: -0.01em; margin: 0; }
+.who p { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+.who .name { color: inherit; opacity: .85; }
+
+.track { position: relative; padding: 4px 0 0; }
+.bar { position: relative; height: 14px; border-radius: 7px; background: var(--hold-tint); }
+.zone { position: absolute; top: 0; bottom: 0; }
+.zone.add { left: 0; background: var(--add-tint); border-radius: 7px 0 0 7px; }
+.zone.sell { right: 0; background: var(--sell-tint); border-radius: 0 7px 7px 0; }
+.range { position: absolute; top: 5px; height: 4px; border-radius: 2px; background: var(--ink); opacity: .32; }
+.tick { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--ink); opacity: .22; }
+.tick.zero { opacity: .6; top: -4px; bottom: -4px; }
+.tick.done { width: 5px; margin-left: -2px; opacity: 1; border-radius: 2px; }
+.pin {
+  position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%;
+  background: var(--muted); border: 3px solid var(--surface); box-shadow: 0 0 0 1px var(--ink);
+}
+.is-add .pin { background: var(--add); }
+.is-sell .pin { background: var(--sell); }
+.pin.off::after { content: ""; position: absolute; top: 3px; border: 3px solid transparent; }
+.pin.off.hi::after { left: 13px; border-left-color: var(--ink); }
+.pin.off.lo::after { right: 13px; border-right-color: var(--ink); }
+.scale { position: relative; height: 18px; margin-top: 5px; font-size: 11px; color: var(--muted); }
+.scale span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+
+.now { text-align: right; }
+.now .chg { display: block; font: 600 20px/1.2 var(--body); }
+.now .px { display: block; font-size: 14px; color: var(--muted); }
+
+.signal strong { display: block; font: 700 22px/1.15 var(--display); letter-spacing: -0.01em; }
+.is-add .signal strong { color: var(--add); }
+.is-sell .signal strong { color: var(--sell); }
+.signal span { display: block; font-size: 14px; color: var(--muted); margin-top: 2px; }
+.btn {
+  display: inline-block; margin-top: 9px; padding: 7px 14px; border-radius: 999px; border: 0; cursor: pointer;
+  background: var(--ink); color: var(--ground); font: 500 14px/1.2 var(--body); text-decoration: none;
+}
+.btn:hover { opacity: .88; }
+
+.more { grid-column: 1 / -1; font-size: 14px; }
+.more summary { cursor: pointer; color: var(--muted); width: max-content; padding: 2px 0; }
+.more table { border-collapse: collapse; width: 100%; max-width: 640px; margin: 8px 0 4px; }
+.more th { text-align: left; font-weight: 500; color: var(--muted); padding: 4px 16px 4px 0; border-bottom: 1px solid var(--line); }
+.more td { padding: 5px 16px 5px 0; border-bottom: 1px solid var(--line); }
+.more tr.here td { font-weight: 600; }
+.more .num { text-align: right; }
+.more .remove { display: inline-block; margin-top: 8px; color: var(--muted); }
+
+.panel { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px; }
+.panel h2 { font: 700 22px/1.2 var(--display); margin: 0 0 4px; }
+.panel > p { margin: 0 0 16px; color: var(--muted); font-size: 15px; max-width: 70ch; }
+form { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) auto; gap: 12px 16px; align-items: end; }
+form label { display: block; font-size: 14px; color: var(--muted); }
+form input {
+  display: block; width: 100%; height: 42px; margin-top: 4px; padding: 9px 10px; font: 400 16px/1.2 var(--body);
+  color: var(--ink); background: var(--ground); border: 1px solid var(--line); border-radius: 6px;
+}
+form .btn { margin: 0; padding: 11px 18px; font-size: 15px; }
+.formnote { grid-column: 1 / -1; margin: 0; font-size: 14px; color: var(--sell); min-height: 1.4em; }
+
+.rules summary { cursor: pointer; font: 700 22px/1.2 var(--display); }
+.rules table { border-collapse: collapse; margin: 14px 0 10px; }
+.rules td { padding: 4px 28px 4px 0; border-bottom: 1px solid var(--line); }
+.rules ul { margin: 12px 0 0; padding-left: 20px; max-width: 72ch; color: var(--muted); font-size: 15px; }
+.rules li { margin: 4px 0; }
+.empty { padding: 36px 24px; color: var(--muted); }
+
+@media (max-width: 860px) {
+  .lot { grid-template-columns: 1fr auto; gap: 12px 16px; padding: 18px 16px 14px 14px; }
+  .track { grid-column: 1 / -1; grid-row: 2; }
+  .signal { grid-column: 1 / -1; }
+  .scale .minor { display: none; }
+  form { grid-template-columns: 1fr 1fr; }
+  form .btn { grid-column: 1 / -1; }
+  .today { padding: 30px 0 22px; }
+  .today p { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">Ladder</div>
+    <div class="asof" id="asof"></div>
+  </header>
+
+  <main>
+    <section class="today" aria-live="polite">
+      <h1 id="headline">Loading…</h1>
+      <p id="detail"></p>
+    </section>
+
+    <div id="notices"></div>
+
+    <div class="toolbar">
+      <fieldset class="seg">
+        <legend>Measure change by</legend>
+        <label><input type="radio" name="basis" value="price" checked><span>Price</span></label>
+        <label><input type="radio" name="basis" value="total"><span>Price plus dividends</span></label>
+      </fieldset>
+      <a class="jump" href="#add">Add a holding</a>
+    </div>
+
+    <section class="lots" id="lots"></section>
+
+    <section class="panel" id="add">
+      <h2>Add a holding</h2>
+      <p>Give a purchase date, the price you paid, or both. With only a date, the dashboard uses that day's closing price.</p>
+      <form id="addform" novalidate>
+        <label>Ticker<input name="ticker" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="VOO"></label>
+        <label>Purchase date<input name="date" type="date"></label>
+        <label>Price paid per share<input name="price" inputmode="decimal" placeholder="optional"></label>
+        <label>Shares<input name="shares" inputmode="decimal" placeholder="optional"></label>
+        <button class="btn" type="submit">Add on GitHub</button>
+        <p class="formnote" id="formnote" role="alert"></p>
+      </form>
+    </section>
+
+    <details class="panel rules">
+      <summary>The rules this page applies</summary>
+      <table id="rulestable"></table>
+      <ul>
+        <li>Change is measured from the price you paid, or from the closing price on the purchase date if you left the price blank.</li>
+        <li>Between two rungs, the nearer one already passed applies: up 45% follows the up-40% rule.</li>
+        <li>Each percentage is a share of what you hold in that position at the time.</li>
+        <li>A rung counts once. Mark it done and it stays quiet, even if the price leaves and comes back. Marking a rung done also covers the smaller rungs before it.</li>
+        <li>Add, Mark done, Undo and Remove each open a pre-filled GitHub issue. Submit it, then reload this page in about a minute.</li>
+      </ul>
+    </details>
+  </main>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const state = { lots: [], rungs: [], prices: { tickers: {} }, repo: null, basis: 'price' };
+
+  try { if (localStorage.getItem('ladder-basis') === 'total') state.basis = 'total'; } catch (e) {}
+
+  /* ---------- formatting ---------- */
+  const pct = (x, digits = 1) => (x < 0 ? '−' : '+') + Math.abs(x * 100).toFixed(digits) + '%';
+  const signed = (n) => (n < 0 ? '−' : '+') + Math.abs(n);
+  const money = (x, cur) => {
+    try { return new Intl.NumberFormat(undefined, { style: 'currency', currency: cur || 'USD', maximumFractionDigits: x >= 1000 ? 0 : 2 }).format(x); }
+    catch (e) { return '$' + x.toFixed(2); }
+  };
+  const shares = (x) => new Intl.NumberFormat(undefined, { maximumFractionDigits: x >= 100 ? 1 : 3 }).format(x);
+  const day = (iso) => new Date(iso + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+  const list = (items) => items.length < 2 ? items.join('') : items.slice(0, -1).join(', ') + ' and ' + items[items.length - 1];
+
+  /* ---------- data ---------- */
+  function parseHoldings(text) {
+    const lines = text.split(/\r?\n/).map((l) => l.trim()).filter((l) => l && l[0] !== '#');
+    if (!lines.length) return [];
+    const cols = lines[0].split(',').map((c) => c.trim().toLowerCase());
+    return lines.slice(1).map((line) => {
+      const cells = line.split(',').map((c) => c.trim().replace(/^"|"$/g, ''));
+      const get = (name) => cells[cols.indexOf(name)] || '';
+      const num = (v) => (v !== '' && isFinite(+v) && +v > 0 ? +v : null);
+      return {
+        ticker: get('ticker').toUpperCase(), date: get('purchase_date'),
+        shares: num(get('shares')), price: num(get('purchase_price')),
+        done: new Set(get('done').split(/[;\s]+/).filter((t) => /^[+-]?\d+$/.test(t)).map(Number)),
+      };
+    }).filter((l) => l.ticker);
+  }
+
+  function repoFromLocation() {
+    const m = location.hostname.match(/^([^.]+)\.github\.io$/);
+    if (!m) return null;
+    const first = location.pathname.split('/').filter(Boolean)[0];
+    return m[1] + '/' + (first && !/\.html$/.test(first) ? first : m[1] + '.github.io');
+  }
+
+  function issueUrl(command) {
+    if (!state.repo) return null;
+    const body = 'Submit this issue to update the dashboard. It closes itself in about a minute.';
+    return 'https://github.com/' + state.repo + '/issues/new?title=' + encodeURIComponent('ladder: ' + command) + '&body=' + encodeURIComponent(body);
+  }
+  const lotKey = (lot) => lot.ticker + (lot.date ? ' ' + lot.date : '');
+  const link = (command, text, cls) => {
+    const url = issueUrl(command);
+    return url ? '<a class="' + (cls || '') + '" href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(text) + '</a>' : '';
+  };
+
+  /* ---------- the strategy ---------- */
+  function evaluate(lot) {
+    const t = state.prices.tickers[lot.ticker];
+    const out = { lot, t, status: 'wait', note: '' };
+    if (!t || !t.last) {
+      out.note = t && t.error ? t.error : 'Waiting for the first price update.';
+      out.broken = !!(t && t.error);
+      return out;
+    }
+    const from = lot.date && t.from ? t.from[lot.date] : null;
+    if (from && from.error && !lot.price) { out.note = from.error + ' Add the price you paid instead.'; out.broken = true; return out; }
+    const hasFrom = from && !from.error;
+    if (!lot.price && !hasFrom) { out.note = 'Waiting for the next price update.'; return out; }
+
+    const entry = lot.price || from.close;
+    const total = state.basis === 'total' && hasFrom && from.adj > 0 && t.last.adj > 0;
+    const entryAdj = total ? entry * from.adj / from.close : null;
+    const change = total ? t.last.adj / entryAdj - 1 : t.last.close / entry - 1;
+    Object.assign(out, { entry, change, total, last: t.last.close, cur: t.currency });
+    out.levelOf = (r) => out.last * (1 + r.change / 100) / (1 + change);
+    if (hasFrom) {
+      out.low = Math.min(change, total ? from.lowAdj / entryAdj - 1 : from.lowClose / entry - 1);
+      out.high = Math.max(change, total ? from.highAdj / entryAdj - 1 : from.highClose / entry - 1);
+    }
+
+    const side = change < 0 ? -1 : 1;
+    const mine = state.rungs.filter((r) => Math.sign(r.change) === side).sort((a, b) => Math.abs(a.change) - Math.abs(b.change));
+    const reached = mine.filter((r) => Math.abs(change * 100) >= Math.abs(r.change) - 1e-9);
+    const doneTo = (s) => Math.max(0, ...state.rungs.filter((r) => Math.sign(r.change) === s && lot.done.has(r.change)).map((r) => Math.abs(r.change)));
+    out.rung = reached.length ? reached[reached.length - 1] : null;
+    out.doneTo = doneTo;
+    out.reachedTo = out.rung ? Math.abs(out.rung.change) : 0;
+    out.side = side;
+
+    const sellAll = state.rungs.find((r) => r.action === 'sell' && r.percent >= 100);
+    if (sellAll && lot.done.has(sellAll.change)) { out.status = 'sold'; return out; }
+    if (out.rung && out.rung.action !== 'hold' && doneTo(side) < Math.abs(out.rung.change)) out.status = out.rung.action;
+    else out.status = 'hold';
+
+    const next = (s) => state.rungs
+      .filter((r) => Math.sign(r.change) === s && r.action !== 'hold')
+      .filter((r) => Math.abs(r.change) > Math.max(doneTo(s), s === side ? out.reachedTo : 0))
+      .sort((a, b) => Math.abs(a.change) - Math.abs(b.change))[0];
+    out.nextDown = next(-1);
+    out.nextUp = next(1);
+    return out;
+  }
+
+  const ruleText = (r) => r.action === 'hold' ? 'Hold' : r.action === 'add' ? 'Add ' + r.percent + '%' : r.percent >= 100 ? 'Sell everything' : 'Sell ' + r.percent + '%';
+
+  /* ---------- rendering ---------- */
+  function trackHtml(e) {
+    const rs = state.rungs.map((r) => r.change);
+    const min = Math.min(...rs) - 10, max = Math.max(...rs) + 10;
+    const x = (v) => ((Math.max(min, Math.min(max, v)) - min) / (max - min) * 100).toFixed(2) + '%';
+    const adds = state.rungs.filter((r) => r.action === 'add').map((r) => r.change);
+    const sells = state.rungs.filter((r) => r.action === 'sell').map((r) => r.change);
+    let h = '<div class="bar">';
+    if (adds.length) h += '<span class="zone add" style="width:' + x(Math.max(...adds)) + '"></span>';
+    if (sells.length) h += '<span class="zone sell" style="left:' + x(Math.min(...sells)) + '"></span>';
+    if (e.low != null) h += '<span class="range" style="left:' + x(e.low * 100) + ';right:calc(100% - ' + x(e.high * 100) + ')"></span>';
+    h += '<i class="tick zero" style="left:' + x(0) + '"></i>';
+    state.rungs.forEach((r) => { h += '<i class="tick' + (e.lot.done.has(r.change) ? ' done' : '') + '" style="left:' + x(r.change) + '"></i>'; });
+    const c = e.change * 100;
+    h += '<span class="pin' + (c > max ? ' off hi' : c < min ? ' off lo' : '') + '" style="left:' + x(c) + '"></span></div><div class="scale">';
+    const edge = new Set([Math.min(...rs), Math.max(...rs), adds.length ? Math.max(...adds) : null, sells.length ? Math.min(...sells) : null]);
+    state.rungs.filter((r) => r.action !== 'hold').forEach((r) => {
+      const far = sells.filter((s) => s < 100).length ? Math.max(...sells.filter((s) => s < 100)) : null;
+      const major = edge.has(r.change) || r.change === far;
+      h += '<span class="' + (major ? '' : 'minor') + '" style="left:' + x(r.change) + '">' + signed(r.change) + '</span>';
+    });
+    h += '<span style="left:' + x(0) + '">0</span></div>';
+    let label = (e.change < 0 ? 'Down ' : 'Up ') + Math.abs(c).toFixed(1) + '% from purchase.';
+    if (e.low != null) label += ' Since purchase it has ranged from ' + pct(e.low, 0) + ' to ' + pct(e.high, 0) + '.';
+    return '<div class="track" role="img" aria-label="' + esc(label) + '">' + h + '</div>';
+  }
+
+  function rungTable(e) {
+    const key = lotKey(e.lot);
+    let h = '<table><tr><th>Change</th><th class="num">Price</th><th>Rule</th><th>Status</th></tr>';
+    state.rungs.slice().sort((a, b) => b.change - a.change).forEach((r) => {
+      const s = Math.sign(r.change), abs = Math.abs(r.change);
+      const reached = s === e.side && abs <= e.reachedTo;
+      let status = reached ? 'Reached' : 'Not reached';
+      if (r.action !== 'hold') {
+        const arg = key + ' ' + (r.change > 0 ? '+' : '') + r.change;
+        if (e.lot.done.has(r.change)) status = 'Done ' + link('undo ' + arg, 'Undo');
+        else if (abs < e.doneTo(s)) status = 'Covered by a later rung';
+        else if (reached) status = 'Reached ' + link('done ' + arg, 'Mark done');
+      }
+      h += '<tr class="' + (e.rung && e.rung.change === r.change ? 'here' : '') + '"><td>' + signed(r.change) + '%</td><td class="num">' +
+        money(e.levelOf(r), e.cur) + '</td><td>' + ruleText(r) + '</td><td>' + status + '</td></tr>';
+    });
+    return h + '</table>';
+  }
+
+  function lotHtml(e) {
+    const lot = e.lot, t = e.t || {};
+    const bought = [];
+    if (e.entry) bought.push((lot.date ? 'Bought ' + day(lot.date) : 'Average cost') + (lot.date ? ' at ' : ' ') + money(e.entry, e.cur));
+    else if (lot.date) bought.push('Bought ' + day(lot.date));
+    if (lot.shares) bought.push(shares(lot.shares) + ' shares');
+    let h = '<article class="lot is-' + e.status + '"><div class="who"><h2>' + esc(lot.ticker) + '</h2>' +
+      (t.name ? '<p class="name">' + esc(t.name) + '</p>' : '') + '<p>' + esc(bought.join(', ')) + '</p></div>';
+    const remove = link('remove ' + lotKey(lot), 'Remove this holding', 'remove');
+
+    if (e.status === 'wait') {
+      return h + '<div class="track"></div><div class="now"></div><div class="signal"><strong>' + (e.broken ? 'No price' : 'Pending') +
+        '</strong><span>' + esc(e.note) + '</span>' + (e.broken ? remove : '') + '</div></article>';
+    }
+    h += trackHtml(e) + '<div class="now"><span class="chg">' + pct(e.change) + '</span><span class="px">' + money(e.last, e.cur) + '</span></div>';
+
+    let title, sub = [], button = '';
+    const amount = (r) => {
+      if (!lot.shares) return '';
+      const n = lot.shares * Math.min(r.percent, 100) / 100;
+      return 'About ' + shares(n) + (shares(n) === '1' ? ' share, ' : ' shares, ') + money(n * e.last, e.cur);
+    };
+    if (e.status === 'sold') {
+      title = 'Sold'; sub.push('Sell-everything rung marked done'); button = remove;
+    } else if (e.status === 'hold') {
+      title = 'Hold';
+      if (e.rung && e.rung.action !== 'hold') sub.push(ruleText(e.rung) + ' at ' + signed(e.rung.change) + '% is done');
+      const nexts = [];
+      if (e.nextDown) nexts.push('add ' + e.nextDown.percent + '% at ' + money(e.levelOf(e.nextDown), e.cur));
+      if (e.nextUp) nexts.push((e.nextUp.percent >= 100 ? 'sell all' : 'sell ' + e.nextUp.percent + '%') + ' at ' + money(e.levelOf(e.nextUp), e.cur));
+      if (nexts.length) sub.push('Next: ' + nexts.join(', '));
+    } else {
+      title = ruleText(e.rung);
+      const a = amount(e.rung); if (a) sub.push(a);
+      sub.push('Passed ' + signed(e.rung.change) + '%' + (e.total ? ' with dividends' : ''));
+      button = link('done ' + lotKey(lot) + ' ' + (e.rung.change > 0 ? '+' : '') + e.rung.change, 'Mark done', 'btn');
+    }
+    h += '<div class="signal"><strong>' + esc(title) + '</strong>' + sub.map((s) => '<span>' + esc(s) + '</span>').join('') + button + '</div>';
+    h += '<details class="more"><summary>All rungs for ' + esc(lot.ticker) + '</summary>' + rungTable(e) +
+      (state.basis === 'total' && !e.total ? '<p>No purchase date, so this one is measured on price alone.</p>' : '') + remove + '</details>';
+    return h + '</article>';
+  }
+
+  function render() {
+    const evals = state.lots.map(evaluate);
+    const weight = (e) => e.status === 'sell' ? 3000 + e.rung.percent : e.status === 'add' ? 2000 + e.rung.percent : e.status === 'hold' ? 1000 : e.status === 'wait' ? 500 : 0;
+    evals.sort((a, b) => weight(b) - weight(a) || (a.status === 'hold' ? b.change - a.change : 0) || a.lot.ticker.localeCompare(b.lot.ticker));
+
+    $('lots').innerHTML = evals.length ? evals.map(lotHtml).join('')
+      : '<p class="empty">Nothing here yet. Add your first holding below.</p>';
+
+    const acts = evals.filter((e) => e.status === 'add' || e.status === 'sell');
+    const sells = acts.filter((e) => e.status === 'sell').length, adds = acts.length - sells;
+    if (!evals.length) { $('headline').textContent = 'No holdings yet'; $('detail').textContent = ''; }
+    else if (!acts.length) {
+      $('headline').textContent = 'Nothing to do';
+      const live = evals.filter((e) => e.status === 'hold').length;
+      $('detail').textContent = live ? 'All ' + live + ' holdings are inside their hold range or already handled.' : '';
+    } else {
+      const parts = [];
+      if (sells) parts.push(sells + ' to sell');
+      if (adds) parts.push(adds + ' to add to');
+      $('headline').textContent = parts.join(', ');
+      const groups = new Map();
+      acts.forEach((e) => { const k = e.status + '|' + ruleText(e.rung); groups.set(k, (groups.get(k) || []).concat(e.lot.ticker)); });
+      $('detail').innerHTML = Array.from(groups, ([k, names]) => {
+        const [kind, text] = k.split('|');
+        const phrase = kind === 'add' ? text + ' to ' + list(names) : text === 'Sell everything' ? 'Sell all of ' + list(names) : text + ' of ' + list(names);
+        return '<span class="' + kind + '">' + esc(phrase) + '.</span>';
+      }).join(' ');
+    }
+
+    const dates = Object.values(state.prices.tickers).map((t) => t.last && t.last.date).filter(Boolean).sort();
+    const latest = dates[dates.length - 1];
+    $('asof').textContent = latest ? 'Closing prices from ' + day(latest) : '';
+    const notices = [];
+    if (latest && (Date.now() - new Date(latest + 'T21:00:00Z')) / 864e5 > 4.5)
+      notices.push('Prices haven’t updated since ' + day(latest) + '. Check the Actions tab of your repository for a failed run.');
+    const bad = state.lots.filter((l) => { const t = state.prices.tickers[l.ticker]; return t && t.error && t.last; }).map((l) => l.ticker);
+    if (bad.length) notices.push('The latest price lookup failed for ' + list(Array.from(new Set(bad))) + ', so older prices are shown.');
+    if (!state.repo) notices.push('This page can’t tell which GitHub repository it belongs to, so the Add and Mark done buttons are off. Open it from its github.io address.');
+    $('notices').innerHTML = notices.map((n) => '<p class="notice">' + esc(n) + '</p>').join('');
+
+    $('rulestable').innerHTML = state.rungs.slice().sort((a, b) => b.change - a.change).map((r) =>
+      '<tr><td>' + (r.change < 0 ? 'Down ' : 'Up ') + Math.abs(r.change) + '%</td><td>' + ruleText(r) + '</td></tr>').join('');
+  }
+
+  /* ---------- controls ---------- */
+  document.querySelectorAll('input[name=basis]').forEach((el) => {
+    el.checked = el.value === state.basis;
+    el.addEventListener('change', () => {
+      state.basis = el.value;
+      try { localStorage.setItem('ladder-basis', el.value); } catch (e) {}
+      render();
+    });
+  });
+
+  $('addform').addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const f = ev.target, note = $('formnote');
+    const ticker = f.ticker.value.trim().toUpperCase(), date = f.date.value, price = f.price.value.trim().replace(/[$,]/g, ''), n = f.shares.value.trim().replace(/,/g, '');
+    const isNum = (v) => /^\d+(\.\d+)?$/.test(v) && +v > 0;
+    let problem = '';
+    if (!/^[A-Z0-9^][A-Z0-9.\-^=]{0,14}$/.test(ticker)) problem = 'Enter a ticker symbol, such as VOO.';
+    else if (!date && !price) problem = 'Enter a purchase date, the price you paid, or both.';
+    else if (date && date > new Date(Date.now() + 864e5).toISOString().slice(0, 10)) problem = 'The purchase date is in the future.';
+    else if (price && !isNum(price)) problem = 'Price paid should be a number, such as 172.50.';
+    else if (n && !isNum(n)) problem = 'Shares should be a number.';
+    else if (state.lots.some((l) => l.ticker === ticker && l.date === date)) problem = ticker + (date ? ' bought on that date' : '') + ' is already here.';
+    else if (!state.repo) problem = 'Open this page from its github.io address to add holdings.';
+    note.textContent = problem;
+    if (problem) return;
+    let command = 'add ' + ticker + (date ? ' ' + date : '');
+    if (n) command += ' shares=' + n;
+    if (price) command += ' price=' + price;
+    window.open(issueUrl(command), '_blank', 'noopener');
+    note.textContent = '';
+  });
+
+  /* ---------- load ---------- */
+  const bust = '?t=' + Date.now();
+  const get = (path) => fetch(path + bust, { cache: 'no-store' });
+  Promise.all([
+    get('holdings.csv').then((r) => (r.ok ? r.text() : '')),
+    get('strategy.json').then((r) => r.json()),
+    get('data/prices.json').then((r) => (r.ok ? r.json() : { tickers: {} })).catch(() => ({ tickers: {} })),
+  ]).then(([csv, strategy, prices]) => {
+    state.lots = parseHoldings(csv);
+    state.rungs = strategy.rungs;
+    state.prices = prices && prices.tickers ? prices : { tickers: {} };
+    state.repo = state.prices.repo || repoFromLocation();
+    window.__ladder = { state, evaluate };
+    render();
+  }).catch((err) => {
+    $('headline').textContent = 'Couldn’t load the dashboard';
+    $('detail').textContent = 'Check that strategy.json and holdings.csv are present and well formed. (' + err.message + ')';
+  });
+})();
+</script>
+</body>
+</html>
