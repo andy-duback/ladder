@@ -1,222 +1,42 @@
 {
- "updated": "2026-11-11T19:04:56Z",
+ "updated": "2026-11-11T19:16:10Z",
  "repo": "andy-duback/ladder",
  "tickers": {
   "COPX": {
    "last": {
     "date": "2026-11-11",
-    "close": 73.535,
-    "adj": 73.535
+    "close": 73.3,
+    "adj": 73.3
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
-     "close": 73.535,
-     "adj": 73.535,
-     "lowClose": 73.535,
-     "highClose": 73.535,
-     "lowAdj": 73.535,
-     "highAdj": 73.535
+     "close": 73.3,
+     "adj": 73.3,
+     "lowClose": 73.3,
+     "highClose": 73.3,
+     "lowAdj": 73.3,
+     "highAdj": 73.3
     }
    },
    "name": "Global X Copper Miners ETF",
    "currency": "USD"
   },
-  "CRDO": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 144.35,
-    "adj": 144.35
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 144.35,
-     "adj": 144.35,
-     "lowClose": 144.35,
-     "highClose": 144.35,
-     "lowAdj": 144.35,
-     "highAdj": 144.35
-    }
-   },
-   "name": "Credo Technology Group Holding Ltd",
-   "currency": "USD"
-  },
-  "CRWD": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 234.27,
-    "adj": 234.27
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 234.27,
-     "adj": 234.27,
-     "lowClose": 234.27,
-     "highClose": 234.27,
-     "lowAdj": 234.27,
-     "highAdj": 234.27
-    }
-   },
-   "name": "CrowdStrike Holdings, Inc.",
-   "currency": "USD"
-  },
-  "ETN": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 365.465,
-    "adj": 365.465
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 365.465,
-     "adj": 365.465,
-     "lowClose": 365.465,
-     "highClose": 365.465,
-     "lowAdj": 365.465,
-     "highAdj": 365.465
-    }
-   },
-   "name": "Eaton Corporation plc",
-   "currency": "USD"
-  },
-  "GLD": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 365.33,
-    "adj": 365.33
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 365.33,
-     "adj": 365.33,
-     "lowClose": 365.33,
-     "highClose": 365.33,
-     "lowAdj": 365.33,
-     "highAdj": 365.33
-    }
-   },
-   "name": "SPDR Gold Shares",
-   "currency": "USD"
-  },
-  "GOOGL": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 294.9,
-    "adj": 294.9
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 294.9,
-     "adj": 294.9,
-     "lowClose": 294.9,
-     "highClose": 294.9,
-     "lowAdj": 294.9,
-     "highAdj": 294.9
-    }
-   },
-   "name": "Alphabet Inc.",
-   "currency": "USD"
-  },
-  "IAG": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 18.35,
-    "adj": 18.35
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 18.35,
-     "adj": 18.35,
-     "lowClose": 18.35,
-     "highClose": 18.35,
-     "lowAdj": 18.35,
-     "highAdj": 18.35
-    }
-   },
-   "name": "IAMGOLD Corporation",
-   "currency": "USD"
-  },
-  "IONQ": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 34.51,
-    "adj": 34.51
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 34.51,
-     "adj": 34.51,
-     "lowClose": 34.51,
-     "highClose": 34.51,
-     "lowAdj": 34.51,
-     "highAdj": 34.51
-    }
-   },
-   "name": "IonQ, Inc.",
-   "currency": "USD"
-  },
-  "IOVA": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 8.04,
-    "adj": 8.04
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 8.04,
-     "adj": 8.04,
-     "lowClose": 8.04,
-     "highClose": 8.04,
-     "lowAdj": 8.04,
-     "highAdj": 8.04
-    }
-   },
-   "name": "Iovance Biotherapeutics, Inc.",
-   "currency": "USD"
-  },
-  "MP": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 37.69,
-    "adj": 37.69
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 37.69,
-     "adj": 37.69,
-     "lowClose": 37.69,
-     "highClose": 37.69,
-     "lowAdj": 37.69,
-     "highAdj": 37.69
-    }
-   },
-   "name": "MP Materials Corp.",
-   "currency": "USD"
-  },
   "NVDA": {
    "last": {
     "date": "2026-11-11",
-    "close": 176.48,
-    "adj": 176.48
+    "close": 175.82,
+    "adj": 175.82
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
-     "close": 176.48,
-     "adj": 176.48,
-     "lowClose": 176.48,
-     "highClose": 176.48,
-     "lowAdj": 176.48,
-     "highAdj": 176.48
+     "close": 175.82,
+     "adj": 175.82,
+     "lowClose": 175.82,
+     "highClose": 175.82,
+     "lowAdj": 175.82,
+     "highAdj": 175.82
     }
    },
    "name": "NVIDIA Corporation",
@@ -225,201 +45,61 @@
   "SLV": {
    "last": {
     "date": "2026-11-11",
-    "close": 46.8048,
-    "adj": 46.8048
+    "close": 46.745,
+    "adj": 46.745
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
-     "close": 46.8048,
-     "adj": 46.8048,
-     "lowClose": 46.8048,
-     "highClose": 46.8048,
-     "lowAdj": 46.8048,
-     "highAdj": 46.8048
+     "close": 46.745,
+     "adj": 46.745,
+     "lowClose": 46.745,
+     "highClose": 46.745,
+     "lowAdj": 46.745,
+     "highAdj": 46.745
     }
    },
    "name": "iShares Silver Trust",
    "currency": "USD"
   },
-  "SPCX": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 141.965,
-    "adj": 141.965
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 141.965,
-     "adj": 141.965,
-     "lowClose": 141.965,
-     "highClose": 141.965,
-     "lowAdj": 141.965,
-     "highAdj": 141.965
-    }
-   },
-   "name": "Space Exploration Technologies Corp.",
-   "currency": "USD"
-  },
-  "SPY": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 761.525,
-    "adj": 761.525
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 761.525,
-     "adj": 761.525,
-     "lowClose": 761.525,
-     "highClose": 761.525,
-     "lowAdj": 761.525,
-     "highAdj": 761.525
-    }
-   },
-   "name": "State Street SPDR S&P 500 ETF Trust",
-   "currency": "USD"
-  },
-  "TSLA": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 393.82,
-    "adj": 393.82
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 393.82,
-     "adj": 393.82,
-     "lowClose": 393.82,
-     "highClose": 393.82,
-     "lowAdj": 393.82,
-     "highAdj": 393.82
-    }
-   },
-   "name": "Tesla, Inc.",
-   "currency": "USD"
-  },
   "TSM": {
    "last": {
     "date": "2026-11-11",
-    "close": 415.26,
-    "adj": 415.26
+    "close": 414.055,
+    "adj": 414.055
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
-     "close": 415.26,
-     "adj": 415.26,
-     "lowClose": 415.26,
-     "highClose": 415.26,
-     "lowAdj": 415.26,
-     "highAdj": 415.26
+     "close": 414.055,
+     "adj": 414.055,
+     "lowClose": 414.055,
+     "highClose": 414.055,
+     "lowAdj": 414.055,
+     "highAdj": 414.055
     }
    },
    "name": "Taiwan Semiconductor Manufacturing Company Limited",
    "currency": "USD"
   },
-  "UNG": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 10.165,
-    "adj": 10.165
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 10.165,
-     "adj": 10.165,
-     "lowClose": 10.165,
-     "highClose": 10.165,
-     "lowAdj": 10.165,
-     "highAdj": 10.165
-    }
-   },
-   "name": "United States Natural Gas Fund, LP",
-   "currency": "USD"
-  },
   "URNM": {
    "last": {
     "date": "2026-11-11",
-    "close": 42.67,
-    "adj": 42.67
+    "close": 42.52,
+    "adj": 42.52
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
-     "close": 42.67,
-     "adj": 42.67,
-     "lowClose": 42.67,
-     "highClose": 42.67,
-     "lowAdj": 42.67,
-     "highAdj": 42.67
+     "close": 42.52,
+     "adj": 42.52,
+     "lowClose": 42.52,
+     "highClose": 42.52,
+     "lowAdj": 42.52,
+     "highAdj": 42.52
     }
    },
    "name": "Sprott Uranium Miners ETF",
-   "currency": "USD"
-  },
-  "VKTX": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 28.82,
-    "adj": 28.82
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 28.82,
-     "adj": 28.82,
-     "lowClose": 28.82,
-     "highClose": 28.82,
-     "lowAdj": 28.82,
-     "highAdj": 28.82
-    }
-   },
-   "name": "Viking Therapeutics, Inc.",
-   "currency": "USD"
-  },
-  "VOO": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 700.0,
-    "adj": 700.0
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 700.0,
-     "adj": 700.0,
-     "lowClose": 700.0,
-     "highClose": 700.0,
-     "lowAdj": 700.0,
-     "highAdj": 700.0
-    }
-   },
-   "name": "Vanguard S&P 500 ETF",
-   "currency": "USD"
-  },
-  "VST": {
-   "last": {
-    "date": "2026-11-11",
-    "close": 135.165,
-    "adj": 135.165
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 135.165,
-     "adj": 135.165,
-     "lowClose": 135.165,
-     "highClose": 135.165,
-     "lowAdj": 135.165,
-     "highAdj": 135.165
-    }
-   },
-   "name": "Vistra Corp.",
    "currency": "USD"
   }
  }
