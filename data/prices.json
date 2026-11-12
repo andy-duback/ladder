@@ -1,22 +1,22 @@
 {
- "updated": "2026-11-12T02:29:20Z",
+ "updated": "2026-11-12T08:15:04Z",
  "repo": "andy-duback/ladder",
  "tickers": {
   "COPX": {
    "last": {
-    "date": "2026-11-10",
-    "close": 72.87,
-    "adj": 72.87
+    "date": "2026-11-11",
+    "close": 73.42,
+    "adj": 73.42
    },
    "from": {
     "2026-11-11": {
-     "date": "2026-11-10",
-     "close": 72.87,
-     "adj": 72.87,
-     "lowClose": 72.87,
-     "highClose": 72.87,
-     "lowAdj": 72.87,
-     "highAdj": 72.87
+     "date": "2026-11-11",
+     "close": 73.42,
+     "adj": 73.42,
+     "lowClose": 73.42,
+     "highClose": 73.42,
+     "lowAdj": 73.42,
+     "highAdj": 73.42
     }
    },
    "name": "Global X Copper Miners ETF",
@@ -24,19 +24,19 @@
   },
   "GOOGL": {
    "last": {
-    "date": "2026-11-10",
-    "close": 287.38,
-    "adj": 287.38
+    "date": "2026-11-11",
+    "close": 293.45,
+    "adj": 293.45
    },
    "from": {
     "2026-11-11": {
-     "date": "2026-11-10",
-     "close": 287.38,
-     "adj": 287.38,
-     "lowClose": 287.38,
-     "highClose": 287.38,
-     "lowAdj": 287.38,
-     "highAdj": 287.38
+     "date": "2026-11-11",
+     "close": 293.45,
+     "adj": 293.45,
+     "lowClose": 293.45,
+     "highClose": 293.45,
+     "lowAdj": 293.45,
+     "highAdj": 293.45
     }
    },
    "name": "Alphabet Inc.",
@@ -44,19 +44,19 @@
   },
   "NVDA": {
    "last": {
-    "date": "2026-11-10",
-    "close": 168.89,
-    "adj": 168.89
+    "date": "2026-11-11",
+    "close": 173.73,
+    "adj": 173.73
    },
    "from": {
     "2026-11-11": {
-     "date": "2026-11-10",
-     "close": 168.89,
-     "adj": 168.89,
-     "lowClose": 168.89,
-     "highClose": 168.89,
-     "lowAdj": 168.89,
-     "highAdj": 168.89
+     "date": "2026-11-11",
+     "close": 173.73,
+     "adj": 173.73,
+     "lowClose": 173.73,
+     "highClose": 173.73,
+     "lowAdj": 173.73,
+     "highAdj": 173.73
     }
    },
    "name": "NVIDIA Corporation",
@@ -64,19 +64,19 @@
   },
   "SLV": {
    "last": {
-    "date": "2026-11-10",
-    "close": 46.48,
-    "adj": 46.48
+    "date": "2026-11-11",
+    "close": 46.65,
+    "adj": 46.65
    },
    "from": {
     "2026-11-11": {
-     "date": "2026-11-10",
-     "close": 46.48,
-     "adj": 46.48,
-     "lowClose": 46.48,
-     "highClose": 46.48,
-     "lowAdj": 46.48,
-     "highAdj": 46.48
+     "date": "2026-11-11",
+     "close": 46.65,
+     "adj": 46.65,
+     "lowClose": 46.65,
+     "highClose": 46.65,
+     "lowAdj": 46.65,
+     "highAdj": 46.65
     }
    },
    "name": "iShares Silver Trust",
@@ -84,19 +84,19 @@
   },
   "TSM": {
    "last": {
-    "date": "2026-11-10",
-    "close": 396.48,
-    "adj": 396.48
+    "date": "2026-11-11",
+    "close": 413.35,
+    "adj": 413.35
    },
    "from": {
     "2026-11-11": {
-     "date": "2026-11-10",
-     "close": 396.48,
-     "adj": 396.48,
-     "lowClose": 396.48,
-     "highClose": 396.48,
-     "lowAdj": 396.48,
-     "highAdj": 396.48
+     "date": "2026-11-11",
+     "close": 413.35,
+     "adj": 413.35,
+     "lowClose": 413.35,
+     "highClose": 413.35,
+     "lowAdj": 413.35,
+     "highAdj": 413.35
     }
    },
    "name": "Taiwan Semiconductor Manufacturing Company Limited",
@@ -104,19 +104,19 @@
   },
   "URNM": {
    "last": {
-    "date": "2026-11-10",
-    "close": 41.78,
-    "adj": 41.78
+    "date": "2026-11-11",
+    "close": 42.4,
+    "adj": 42.4
    },
    "from": {
     "2026-11-11": {
-     "date": "2026-11-10",
-     "close": 41.78,
-     "adj": 41.78,
-     "lowClose": 41.78,
-     "highClose": 41.78,
-     "lowAdj": 41.78,
-     "highAdj": 41.78
+     "date": "2026-11-11",
+     "close": 42.4,
+     "adj": 42.4,
+     "lowClose": 42.4,
+     "highClose": 42.4,
+     "lowAdj": 42.4,
+     "highAdj": 42.4
     }
    },
    "name": "Sprott Uranium Miners ETF",
