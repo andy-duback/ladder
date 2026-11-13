@@ -1,21 +1,21 @@
 {
- "updated": "2026-11-13T02:05:49Z",
+ "updated": "2026-11-13T07:53:12Z",
  "repo": "andy-duback/ladder",
  "tickers": {
   "COPX": {
    "last": {
-    "date": "2026-11-11",
-    "close": 73.42,
-    "adj": 73.42
+    "date": "2026-11-12",
+    "close": 71.01,
+    "adj": 71.01
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 73.42,
      "adj": 73.42,
-     "lowClose": 73.42,
+     "lowClose": 71.01,
      "highClose": 73.42,
-     "lowAdj": 73.42,
+     "lowAdj": 71.01,
      "highAdj": 73.42
     }
    },
@@ -24,9 +24,9 @@
   },
   "GOOGL": {
    "last": {
-    "date": "2026-11-11",
-    "close": 293.45,
-    "adj": 293.45
+    "date": "2026-11-12",
+    "close": 298.7,
+    "adj": 298.7
    },
    "from": {
     "2026-11-11": {
@@ -34,9 +34,9 @@
      "close": 293.45,
      "adj": 293.45,
      "lowClose": 293.45,
-     "highClose": 293.45,
+     "highClose": 298.7,
      "lowAdj": 293.45,
-     "highAdj": 293.45
+     "highAdj": 298.7
     }
    },
    "name": "Alphabet Inc.",
@@ -44,18 +44,18 @@
   },
   "NVDA": {
    "last": {
-    "date": "2026-11-11",
-    "close": 173.73,
-    "adj": 173.73
+    "date": "2026-11-12",
+    "close": 166.19,
+    "adj": 166.19
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 173.73,
      "adj": 173.73,
-     "lowClose": 173.73,
+     "lowClose": 166.19,
      "highClose": 173.73,
-     "lowAdj": 173.73,
+     "lowAdj": 166.19,
      "highAdj": 173.73
     }
    },
@@ -64,18 +64,18 @@
   },
   "SLV": {
    "last": {
-    "date": "2026-11-11",
-    "close": 46.65,
-    "adj": 46.65
+    "date": "2026-11-12",
+    "close": 45.12,
+    "adj": 45.12
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 46.65,
      "adj": 46.65,
-     "lowClose": 46.65,
+     "lowClose": 45.12,
      "highClose": 46.65,
-     "lowAdj": 46.65,
+     "lowAdj": 45.12,
      "highAdj": 46.65
     }
    },
@@ -84,18 +84,18 @@
   },
   "TSM": {
    "last": {
-    "date": "2026-11-11",
-    "close": 413.35,
-    "adj": 413.35
+    "date": "2026-11-12",
+    "close": 405.49,
+    "adj": 405.49
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 413.35,
      "adj": 413.35,
-     "lowClose": 413.35,
+     "lowClose": 405.49,
      "highClose": 413.35,
-     "lowAdj": 413.35,
+     "lowAdj": 405.49,
      "highAdj": 413.35
     }
    },
@@ -104,18 +104,18 @@
   },
   "URNM": {
    "last": {
-    "date": "2026-11-11",
-    "close": 42.4,
-    "adj": 42.4
+    "date": "2026-11-12",
+    "close": 40.27,
+    "adj": 40.27
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 42.4,
      "adj": 42.4,
-     "lowClose": 42.4,
+     "lowClose": 40.27,
      "highClose": 42.4,
-     "lowAdj": 42.4,
+     "lowAdj": 40.27,
      "highAdj": 42.4
     }
    },
