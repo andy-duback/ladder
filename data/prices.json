@@ -1,21 +1,21 @@
 {
- "updated": "2026-11-13T18:05:42Z",
+ "updated": "2026-11-13T18:07:06Z",
  "repo": "andy-duback/ladder",
  "tickers": {
   "COPX": {
    "last": {
     "date": "2026-11-13",
-    "close": 69.17,
-    "adj": 69.17
+    "close": 69.235,
+    "adj": 69.235
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 73.42,
      "adj": 73.42,
-     "lowClose": 69.17,
+     "lowClose": 69.235,
      "highClose": 73.42,
-     "lowAdj": 69.17,
+     "lowAdj": 69.235,
      "highAdj": 73.42
     }
    },
@@ -25,8 +25,8 @@
   "GOOGL": {
    "last": {
     "date": "2026-11-13",
-    "close": 295.4312,
-    "adj": 295.4312
+    "close": 295.585,
+    "adj": 295.585
    },
    "from": {
     "2026-11-11": {
@@ -45,18 +45,18 @@
   "MU": {
    "last": {
     "date": "2026-11-13",
-    "close": 762.435,
-    "adj": 762.435
+    "close": 762.91,
+    "adj": 762.91
    },
    "from": {
     "2026-11-13": {
      "date": "2026-11-13",
-     "close": 762.435,
-     "adj": 762.435,
-     "lowClose": 762.435,
-     "highClose": 762.435,
-     "lowAdj": 762.435,
-     "highAdj": 762.435
+     "close": 762.91,
+     "adj": 762.91,
+     "lowClose": 762.91,
+     "highClose": 762.91,
+     "lowAdj": 762.91,
+     "highAdj": 762.91
     }
    },
    "name": "Micron Technology, Inc.",
@@ -65,17 +65,17 @@
   "NVDA": {
    "last": {
     "date": "2026-11-13",
-    "close": 160.925,
-    "adj": 160.925
+    "close": 161.02,
+    "adj": 161.02
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 173.73,
      "adj": 173.73,
-     "lowClose": 160.925,
+     "lowClose": 161.02,
      "highClose": 173.73,
-     "lowAdj": 160.925,
+     "lowAdj": 161.02,
      "highAdj": 173.73
     }
    },
@@ -85,17 +85,17 @@
   "SLV": {
    "last": {
     "date": "2026-11-13",
-    "close": 44.315,
-    "adj": 44.315
+    "close": 44.3096,
+    "adj": 44.3096
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 46.65,
      "adj": 46.65,
-     "lowClose": 44.315,
+     "lowClose": 44.3096,
      "highClose": 46.65,
-     "lowAdj": 44.315,
+     "lowAdj": 44.3096,
      "highAdj": 46.65
     }
    },
@@ -105,41 +105,21 @@
   "TSM": {
    "last": {
     "date": "2026-11-13",
-    "close": 395.795,
-    "adj": 395.795
+    "close": 396.08,
+    "adj": 396.08
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 413.35,
      "adj": 413.35,
-     "lowClose": 395.795,
+     "lowClose": 396.08,
      "highClose": 413.35,
-     "lowAdj": 395.795,
+     "lowAdj": 396.08,
      "highAdj": 413.35
     }
    },
    "name": "Taiwan Semiconductor Manufacturing Company Limited",
-   "currency": "USD"
-  },
-  "URNM": {
-   "last": {
-    "date": "2026-11-13",
-    "close": 39.39,
-    "adj": 39.39
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 42.4,
-     "adj": 42.4,
-     "lowClose": 39.39,
-     "highClose": 42.4,
-     "lowAdj": 39.39,
-     "highAdj": 42.4
-    }
-   },
-   "name": "Sprott Uranium Miners ETF",
    "currency": "USD"
   }
  }
