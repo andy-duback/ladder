@@ -1,21 +1,21 @@
 {
- "updated": "2026-11-13T18:09:14Z",
+ "updated": "2026-11-13T18:09:57Z",
  "repo": "andy-duback/ladder",
  "tickers": {
   "COPX": {
    "last": {
     "date": "2026-11-13",
-    "close": 69.18,
-    "adj": 69.18
+    "close": 69.14,
+    "adj": 69.14
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 73.42,
      "adj": 73.42,
-     "lowClose": 69.18,
+     "lowClose": 69.14,
      "highClose": 73.42,
-     "lowAdj": 69.18,
+     "lowAdj": 69.14,
      "highAdj": 73.42
     }
    },
@@ -25,8 +25,8 @@
   "GOOGL": {
    "last": {
     "date": "2026-11-13",
-    "close": 295.32,
-    "adj": 295.32
+    "close": 295.26,
+    "adj": 295.26
    },
    "from": {
     "2026-11-11": {
@@ -45,37 +45,57 @@
   "MU": {
    "last": {
     "date": "2026-11-13",
-    "close": 762.47,
-    "adj": 762.47
+    "close": 761.79,
+    "adj": 761.79
    },
    "from": {
     "2026-11-13": {
      "date": "2026-11-13",
-     "close": 762.47,
-     "adj": 762.47,
-     "lowClose": 762.47,
-     "highClose": 762.47,
-     "lowAdj": 762.47,
-     "highAdj": 762.47
+     "close": 761.79,
+     "adj": 761.79,
+     "lowClose": 761.79,
+     "highClose": 761.79,
+     "lowAdj": 761.79,
+     "highAdj": 761.79
     }
    },
    "name": "Micron Technology, Inc.",
    "currency": "USD"
   },
+  "NVDA": {
+   "last": {
+    "date": "2026-11-13",
+    "close": 160.895,
+    "adj": 160.895
+   },
+   "from": {
+    "2026-11-12": {
+     "date": "2026-11-12",
+     "close": 166.19,
+     "adj": 166.19,
+     "lowClose": 160.895,
+     "highClose": 166.19,
+     "lowAdj": 160.895,
+     "highAdj": 166.19
+    }
+   },
+   "name": "NVIDIA Corporation",
+   "currency": "USD"
+  },
   "SLV": {
    "last": {
     "date": "2026-11-13",
-    "close": 44.2995,
-    "adj": 44.2995
+    "close": 44.29,
+    "adj": 44.29
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 46.65,
      "adj": 46.65,
-     "lowClose": 44.2995,
+     "lowClose": 44.29,
      "highClose": 46.65,
-     "lowAdj": 44.2995,
+     "lowAdj": 44.29,
      "highAdj": 46.65
     }
    },
@@ -85,17 +105,17 @@
   "TSM": {
    "last": {
     "date": "2026-11-13",
-    "close": 395.75,
-    "adj": 395.75
+    "close": 395.69,
+    "adj": 395.69
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 413.35,
      "adj": 413.35,
-     "lowClose": 395.75,
+     "lowClose": 395.69,
      "highClose": 413.35,
-     "lowAdj": 395.75,
+     "lowAdj": 395.69,
      "highAdj": 413.35
     }
    },
