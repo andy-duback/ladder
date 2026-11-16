@@ -1,41 +1,21 @@
 {
- "updated": "2026-11-16T18:46:27Z",
+ "updated": "2026-11-16T18:51:32Z",
  "repo": "andy-duback/ladder",
  "tickers": {
-  "COPX": {
-   "last": {
-    "date": "2026-11-16",
-    "close": 65.81,
-    "adj": 65.81
-   },
-   "from": {
-    "2026-11-11": {
-     "date": "2026-11-11",
-     "close": 73.42,
-     "adj": 73.42,
-     "lowClose": 65.81,
-     "highClose": 73.42,
-     "lowAdj": 65.81,
-     "highAdj": 73.42
-    }
-   },
-   "name": "Global X Copper Miners ETF",
-   "currency": "USD"
-  },
   "GOOGL": {
    "last": {
     "date": "2026-11-16",
-    "close": 285.035,
-    "adj": 285.035
+    "close": 286.2043,
+    "adj": 286.2043
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 293.45,
      "adj": 293.45,
-     "lowClose": 285.035,
+     "lowClose": 286.2043,
      "highClose": 298.7,
-     "lowAdj": 285.035,
+     "lowAdj": 286.2043,
      "highAdj": 298.7
     }
    },
@@ -45,17 +25,17 @@
   "MU": {
    "last": {
     "date": "2026-11-16",
-    "close": 724.3101,
-    "adj": 724.3101
+    "close": 729.92,
+    "adj": 729.92
    },
    "from": {
     "2026-11-13": {
      "date": "2026-11-13",
      "close": 778.31,
      "adj": 778.31,
-     "lowClose": 724.3101,
+     "lowClose": 729.92,
      "highClose": 778.31,
-     "lowAdj": 724.3101,
+     "lowAdj": 729.92,
      "highAdj": 778.31
     }
    },
@@ -65,17 +45,17 @@
   "NVDA": {
    "last": {
     "date": "2026-11-16",
-    "close": 155.73,
-    "adj": 155.73
+    "close": 156.34,
+    "adj": 156.34
    },
    "from": {
     "2026-11-12": {
      "date": "2026-11-12",
      "close": 166.19,
      "adj": 166.19,
-     "lowClose": 155.73,
+     "lowClose": 156.34,
      "highClose": 166.19,
-     "lowAdj": 155.73,
+     "lowAdj": 156.34,
      "highAdj": 166.19
     }
    },
@@ -85,17 +65,17 @@
   "SLV": {
    "last": {
     "date": "2026-11-16",
-    "close": 42.29,
-    "adj": 42.29
+    "close": 42.43,
+    "adj": 42.43
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 46.65,
      "adj": 46.65,
-     "lowClose": 42.29,
+     "lowClose": 42.43,
      "highClose": 46.65,
-     "lowAdj": 42.29,
+     "lowAdj": 42.43,
      "highAdj": 46.65
     }
    },
@@ -105,17 +85,17 @@
   "TSM": {
    "last": {
     "date": "2026-11-16",
-    "close": 375.34,
-    "adj": 375.34
+    "close": 377.44,
+    "adj": 377.44
    },
    "from": {
     "2026-11-11": {
      "date": "2026-11-11",
      "close": 413.35,
      "adj": 413.35,
-     "lowClose": 375.34,
+     "lowClose": 377.44,
      "highClose": 413.35,
-     "lowAdj": 375.34,
+     "lowAdj": 377.44,
      "highAdj": 413.35
     }
    },
